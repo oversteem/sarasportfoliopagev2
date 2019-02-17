@@ -1,28 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import Route from 'react-router-dom';
+
+//import logo from './logo.svg';
+//import './App.css';
+import About from './components/about/About';
+import Skills from './components/skills/Skills';
+import { Heading1 } from './basic/styles';
+import Scroll from './components/Scroll';
+//import Navigation from './components/Navigation';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
+import Header from './components/header/Header';
+import Footer from './components/footer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import Color from './components/Color';
+import { ThemeProvider } from 'styled-components';
+
+
+library.add(fas, fab)
 
 class App extends Component {
+  state = {
+    theme: {
+      main: new Color(350, 77, 60, 1),
+
+
+    }
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ThemeProvider theme={this.state.theme}>
+        <div className="app">
+          <Header />
+          <Scroll />
+          <Heading1> &lt; Front End Developer in Stockholm &gt; </Heading1>
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+          <Footer />
+        </div>
+      </ThemeProvider>
     );
   }
-}
+};
 
 export default App;
