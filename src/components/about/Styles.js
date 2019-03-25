@@ -20,7 +20,6 @@ export const Flexcontainer2 = styled.div`
 export const Profilpicture = styled.div`
      position: absolute;
     top: 1em;
-    /* left: 18em; */
     width: 0.4em;
     height: 0.4em; 
     justify-content: center;
@@ -43,4 +42,8 @@ export const Article = styled.article`
     border-radius: 0.5em;
     padding: 1em;
     margin: 0 11em 0 11em;
+    @media (max-width: 600px) {
+      margin-left: 10em;
+        width: 15em;       
+  }
 `;

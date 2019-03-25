@@ -10,8 +10,8 @@ export const Social = styled.div`
      display: flex;
      justify-content: space-around; 
 
+     @media (max-width: 600px) {
+      margin-left: 1em;
+        width: 5em;
+  }
 `;
-
-/*export const ContactContainer = styled.div`
-
-`;*/

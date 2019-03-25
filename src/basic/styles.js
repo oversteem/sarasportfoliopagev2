@@ -11,6 +11,11 @@ export const Heading1 = styled.h1`
     font-style: italic;
     font-size: 2.4em;  
     margin-bottom: 3em;
+
+    @media (max-width: 600px) {
+      margin-left: 1em;
+             
+  }
 `;
 
 export const Heading2 = styled.h2`
@@ -19,6 +24,7 @@ export const Heading2 = styled.h2`
     font-size: 2.5em;
     color: ${p => p.theme.main.light(9)};
     font-style: italic;
+ 
 `;
 
 export const Heading3 = styled.h3`

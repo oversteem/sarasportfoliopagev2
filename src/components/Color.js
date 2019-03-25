@@ -6,6 +6,7 @@ export default class Color {
         this.lum = lum;
         this.alpha = alpha;
         this.hsl = `hsla(${this.hue},${this.sat}%,${this.lum}%,${this.alpha})`;
+        //this.getNewHue = `hsla(${this.hue},${this.sat}%,${this.lum}%,${this.alpha})`;
     }
 
     darken(value) {
@@ -15,4 +16,12 @@ export default class Color {
     light(value) {
         return `hsla(${this.hue},${this.sat}%,${this.lum + value}%,${this.alpha})`
     }
+
+    /*getNewHue(value) {
+       return `hsla(${this.hue},${this.sat}%,${this.lum}%,${this.alpha})`
+
+
+   }
+*/
 };
+

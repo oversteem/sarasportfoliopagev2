@@ -1,13 +1,12 @@
 import React from 'react';
+import { Procented } from './styles';
+
 
 const Footer = () => (
 
-    <Footer>
+  <Procented>
+    <p>&copy; Sara Överström 2018 </p>
+  </Procented>
 
-        <div>
-            <p>&copy; Sara Överström 2018 </p>
-        </div>
-
-    </Footer>
-)
+);
 export default Footer;

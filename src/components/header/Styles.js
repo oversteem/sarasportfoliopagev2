@@ -8,6 +8,7 @@ left: 0;
 height: 100px;
 display: flex;
 flex-direction: row;
+
 `;
 
 export const ApiColor = styled.div`

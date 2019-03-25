@@ -1,13 +1,16 @@
 import React from 'react';
+import { withTheme } from 'styled-components';
+import Color from '../Color';
 
 
-const Logo = () => {
+const Logo = ({ theme, click }) => {
 
   const style = {
     height: '100%'
   }
   const cls1 = {
-    fill: '#fff'
+    fill: theme.main.hsl
+
   }
 
   const cls2 = {
@@ -23,13 +26,13 @@ const Logo = () => {
   }
 
   const cls4 = {
-    stroke: '#ed0e94',
+    stroke: 'none',
     fill: '#ed0e94'
   }
 
   const cls5 = {
     stroke: 'none',
-    fill: '#fff'
+    fill: '#000000'
   }
   const cls6 = {
     fill: '#ec0e93',
@@ -42,15 +45,15 @@ const Logo = () => {
     stroke: 'none'
   }
 
-
+  console.log(theme.main.hsl);
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '100%' }} width="180" height="511" viewBox="0 0 719 511">
+    <svg xmlns="http://www.w3.org/2000/svg" onClick={() => click(Math.floor(Math.random() * 360))} style={style} width="180" height="511" viewBox="0 0 719 511">
       <g id="Group_1" data-name="Group 1" transform="translate(-333 -169)">
         <g id="Path_11" data-name="Path 11" style={cls1} transform="translate(333 169)">
           <path style={cls5} d="M 417 311 L 5 311 L 5 5 L 417 5 L 417 311 Z" />
           <path style={cls6} d="M 10 10 L 10 306 L 412 306 L 412 10 L 10 10 M 0 0 L 422 0 L 422 316 L 0 316 L 0 0 Z" />
         </g>
-        <g id="Path_10" data-name="Path 10" class="cls-1" transform="translate(630 364)">
+        <g id="Path_10" data-name="Path 10" style={cls1} transform="translate(630 364)">
           <path style={cls5} d="M 417 311 L 5 311 L 5 5 L 417 5 L 417 311 Z" />
           <path style={cls7} d="M 10 10 L 10 306 L 412 306 L 412 10 L 10 10 M 0 0 L 422 0 L 422 316 L 0 316 L 0 0 Z" />
         </g>
@@ -66,7 +69,7 @@ const Logo = () => {
       </g>
     </svg>
 
-  )
-}
+  );
+};
 
-export default Logo;
+export default withTheme(Logo);

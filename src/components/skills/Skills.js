@@ -1,33 +1,26 @@
 import React from 'react';
 import SkillBar from 'react-skillbars';
+import { MySkills } from './Styles';
+
 const SKILLS = [
-  {
-    "type": "Java",
-    "level": 100
-  },
+
   {
     "type": "React",
-    "level": 85
-  },
-  {
-    "type": "Javascript",
-    "level": 75
-  },
-  {
-    "type": "Spring",
-    "level": 50
-  },
-  {
-    "type": "Docker",
-    "level": 25
-  },
-  {
-    "type": "HTML",
     "level": 20
   },
   {
-    "type": "NoSQL",
-    "level": 0
+    "type": "Javascript",
+    "level": 45
+  },
+
+
+  {
+    "type": "HTML",
+    "level": 80
+  },
+  {
+    "type": "CSS",
+    "level": 80
   }
 ]
 const colors = {
@@ -55,9 +48,9 @@ const colors = {
 }
 
 const Skills = (props) => (
-  <div id="skills">
+  <MySkills id="skills">
     <SkillBar skills={SKILLS} colors={colors} />
-  </div>
+  </MySkills>
 );
 
 export default Skills;
